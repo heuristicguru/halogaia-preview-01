@@ -1,0 +1,26 @@
+---
+const { title = 'Halo Gaia', description = 'Retreats & dolphin encounters in Ponta Malongane', schema = null } = Astro.props;
+import '../styles/base.css';
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {schema && (<script type="application/ld+json" set:html={JSON.stringify(schema)} />)}
+  </head>
+  <body class="text-gray-900">
+    <header class="border-b">
+      <div class="mx-auto max-w-6xl px-4 py-4 flex justify-between">
+        <a href="/">Halo Gaia</a>
+        <nav class="flex gap-4">
+          <a href="/retreats">Retreats</a>
+          <a href="/experiences">Experiences</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <slot />
+  </body>
+</html>

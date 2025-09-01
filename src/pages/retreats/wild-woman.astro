@@ -1,0 +1,16 @@
+---
+import Layout from '../../templates/Layout.astro';
+const schema = {
+  "@context":"https://schema.org","@type":"Event",
+  "name":"Re-Wild Yourself (Women’s Retreat)",
+  "startDate":"2025-08-13","endDate":"2025-08-18",
+  "offers":{"@type":"Offer","price":"14900","priceCurrency":"ZAR"}
+};
+---
+<Layout title="Re-Wild Yourself — Mozambique" description="Women’s rewilding retreat" schema={schema}>
+  <main class="mx-auto max-w-6xl px-4 py-12">
+    <h1 class="text-3xl font-semibold">Re-Wild Yourself (Women’s Retreat)</h1>
+    <p class="mt-2">Dates: 13–18 Aug 2025 • From R14 900 pps</p>
+    <a class="inline-block mt-6 border rounded-xl px-5 py-3" href="/contact">Enquire</a>
+  </main>
+</Layout>

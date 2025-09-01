@@ -1,0 +1,15 @@
+---
+import Layout from '../templates/Layout.astro';
+const schema = {"@context":"https://schema.org","@type":"Organization","name":"Halo Gaia"};
+---
+<Layout title="Halo Gaia — Retreats in Mozambique" description="Preview of improved site IA" schema={schema}>
+  <main class="mx-auto max-w-6xl px-4 py-12">
+    <h1 class="text-4xl font-semibold">Retreat to the wild soul of Mozambique</h1>
+    <p class="mt-4 text-lg text-gray-700">Swim with wild dolphins, women’s rewilding retreats, and family holidays.</p>
+    <div class="mt-8 grid gap-6 md:grid-cols-3">
+      <a href="/retreats" class="border rounded-xl p-6">Retreats</a>
+      <a href="/experiences" class="border rounded-xl p-6">Experiences</a>
+      <a href="/contact" class="border rounded-xl p-6">Contact</a>
+    </div>
+  </main>
+</Layout>

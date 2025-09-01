@@ -1,0 +1,11 @@
+---
+import Layout from '../../templates/Layout.astro';
+const schema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Is touching allowed?","acceptedAnswer":{"@type":"Answer","text":"No—strict no-touch ethic."}}]};
+---
+<Layout title="Swim with Dolphins — Mozambique" description="Respectful, permit-aligned swims" schema={schema}>
+  <main class="mx-auto max-w-6xl px-4 py-12">
+    <h1 class="text-3xl font-semibold">Swim with Dolphins</h1>
+    <p class="mt-2">Ethical encounters guided by experienced ocean facilitators.</p>
+  </main>
+</Layout>
