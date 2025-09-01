@@ -2,21 +2,20 @@
 import Layout from '../../templates/Layout.astro';
 const base = import.meta.env.BASE_URL;
 const retreats = [
-  {slug:'wild-woman', title:'Re-Wild Yourself (Women’s Retreat)', dates:'13–18 Aug 2025', price:'From R14 900 pps', summary:'Circle, ocean practices, sound journeys, and dolphin encounters.'},
-  {slug:'family-holiday', title:'Wild Dolphin Family Holiday', dates:'School holidays', price:'Custom packages', summary:'Family-friendly ocean time, local culture and gentle adventure.'},
-  {slug:'blue-moon', title:'Blue Moon Ocean Retreat', dates:'TBD', price:'From R16 500 pps', summary:'Deep rest, ocean meditations and nature immersion.'}
+  {slug:'re-wild-yourself', title:'Re‑Wild Yourself (Women’s Retreat)', dates:'Upcoming cycles', price:'See page', img:'https://www.halogaia.com/wp-content/uploads/2025/02/WOMENS-REWILDING-WEBBANNER.jpg'}
 ];
 ---
 <Layout title="Retreats" description="Upcoming retreats in Ponta Malongane—dates, pricing, inclusions.">
   <main class="container section">
     <h1 class="h1">Retreats</h1>
-    <p class="lead mt-2">Choose a retreat and book your spot. All retreats follow our respectful marine code.</p>
     <ul class="mt-8 grid gap-6 md:grid-cols-2">
       {retreats.map(r => (
-        <li class="card p-6">
-          <h3 class="h3"><a class="no-underline" href={base + 'retreats/' + r.slug + '/'}>{r.title}</a></h3>
-          <p class="mt-2">{r.dates} • {r.price}</p>
-          <p class="text-gray-700">{r.summary}</p>
+        <li class="card p-0 overflow-hidden">
+          <img src={r.img} alt={r.title} class="w-full" />
+          <div class="p-6">
+            <h3 class="h3"><a class="no-underline" href={base + 'retreats/' + r.slug + '/'}>{r.title}</a></h3>
+            <p class="mt-2">{r.dates} • {r.price}</p>
+          </div>
         </li>
       ))}
     </ul>

@@ -4,43 +4,37 @@ import '../styles/base.css';
 const base = import.meta.env.BASE_URL;
 const href = (p) => base + (p?.replace(/^\//,'') || '');
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <link rel="icon" href={href('favicon.ico')} />
-    {schema && (<script type="application/ld+json" set:html={JSON.stringify(schema)} />)}
-  </head>
-  <body>
-    <header class="border-b">
-      <div class="container flex items-center justify-between py-4">
-        <a class="font-semibold text-xl no-underline" href={href('')}>Halo Gaia</a>
-        <nav class="flex gap-5 text-sm md:text-base">
-          <a href={href('retreats/')}>Retreats</a>
-          <a href={href('experiences/')}>Experiences</a>
-          <a href={href('accommodation/')}>Accommodation</a>
-          <a href={href('plan-your-trip')}>Plan Your Trip</a>
-          <a href={href('events/')}>Events</a>
-          <a href={href('blog/')}>Blog</a>
-          <a href={href('contact')}>Contact</a>
-        </nav>
-      </div>
-    </header>
-    <slot />
-    <footer class="mt-20 border-t">
-      <div class="container py-10 grid gap-6 md:grid-cols-3">
-        <div><b>Halo Gaia</b><br/><span class="text-gray-600">Ponta Malongane, Mozambique</span></div>
-        <div class="text-gray-600">Respectful marine encounters • Women’s rewilding retreats • Family holidays</div>
-        <div class="flex gap-4">
-          <a href="https://instagram.com/">Instagram</a>
-          <a href="https://facebook.com/">Facebook</a>
-          <a href="https://youtube.com/">YouTube</a>
-          <a href="tel:+27XXXXXXXXX">Call</a>
-          <a href="https://wa.me/27XXXXXXXXX">WhatsApp</a>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+<html lang="en"><head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title><meta name="description" content={description} />
+{schema && (<script type="application/ld+json" set:html={JSON.stringify(schema)} />)}
+<link rel="icon" href={href('favicon.ico')} /></head>
+<body>
+<header class="sticky top-0 z-50 border-b bg-white/70">
+  <div class="container flex items-center justify-between py-3">
+    <a class="font-semibold text-xl no-underline" href={href('')}>Halo Gaia</a>
+    <nav class="flex gap-5 text-sm md:text-base">
+      <a href={href('retreats/')}>Retreats</a>
+      <a href={href('holidays/')}>Holidays</a>
+      <a href={href('experiences/')}>Experiences</a>
+      <a href={href('accommodation/')}>Accommodation</a>
+      <a href={href('learn/plan-your-trip')}>Plan Your Trip</a>
+      <a href={href('events/')}>Calendar</a>
+      <a href={href('blog/')}>Blog</a>
+      <a href={href('contact')}>Contact</a>
+    </nav>
+  </div>
+</header>
+<slot />
+<footer class="mt-20 border-t">
+  <div class="container py-10 grid gap-6 md:grid-cols-3">
+    <div><b>Halo Gaia</b><div class="text-gray-600">Ponta Malongane, Mozambique</div></div>
+    <div class="text-gray-600">Respectful marine encounters • Women’s rewilding retreats • Community upliftment</div>
+    <div class="chips">
+      <a href="https://www.instagram.com/courtneyhalogaia/">Instagram</a>
+      <a href="https://www.facebook.com/halogaia">Facebook</a>
+      <a href="https://x.com/gaiahalo">Twitter</a>
+    </div>
+  </div>
+</footer>
+</body></html>

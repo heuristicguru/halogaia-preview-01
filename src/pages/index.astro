@@ -1,29 +1,30 @@
 ---
 import Layout from '../templates/Layout.astro';
-import Hero from '../components/Hero.astro';
-import TrustStrip from '../components/TrustStrip.astro';
-import CTA from '../components/CTA.astro';
-const schema = {"@context":"https://schema.org","@type":"Organization","name":"Halo Gaia Adventure Travel","url":"https://example.com"};
-const base = import.meta.env.BASE_URL;
+const schema = {"@context":"https://schema.org","@type":"Organization","name":"Halo Gaia Adventure Travel"};
+const hero = "https://halogaia.com/wp-content/uploads/2018/09/hg8.jpg";
 ---
-<Layout title="Retreats & Wild Dolphin Encounters in Mozambique" description="Swim with wild dolphins, women’s rewilding retreats, and family holidays in Ponta Malongane." schema={schema}>
-  <Hero title="Retreat to the wild soul of Mozambique" text="Swim with wild dolphins, rest by the ocean, and reconnect with nature in Ponta Malongane." />
-  <TrustStrip />
-  <section class="section">
-    <div class="container grid gap-6 md:grid-cols-3">
-      <a class="card p-6 no-underline" href={base + 'retreats/wild-woman/'}>
-        <h3 class="h3">Re-Wild Yourself (Women’s Retreat)</h3>
-        <p class="mt-2 text-gray-700">Circle, ocean practices, and dolphin encounters. Dates & pricing inside.</p>
-      </a>
-      <a class="card p-6 no-underline" href={base + 'experiences/swim-with-dolphins/'}>
-        <h3 class="h3">Swim with Dolphins</h3>
-        <p class="mt-2 text-gray-700">Respectful, permit-aligned ocean time with resident pods.</p>
-      </a>
-      <a class="card p-6 no-underline" href={base + 'accommodation/'}>
-        <h3 class="h3">Accommodation</h3>
-        <p class="mt-2 text-gray-700">From rustic huts to private homes. Curated stays close to launch.</p>
-      </a>
+<Layout title="Swimming with Dolphins - Mozambique Retreats - Halo Gaia Adventure Travel" description="Halo Gaia creates life-changing experiences for guests offfering swimming with wild dolphins, dolphin retreats, adventure and Ponta Malongane vacations." schema={schema}>
+  <section>
+    <div class="w-full overflow-hidden">
+      <img src={hero} alt="Halo Gaia ocean hero" class="w-full hero-img" />
+    </div>
+    <div class="container py-10">
+      <h1 class="h1">Retreat to the wild soul of Mozambique</h1>
+      <p class="lead mt-4">Living the dream since 1999 Since 1999, Halo Gaia Wellness and Adventure Travel has committed to creating a deeply relevant, life changing experience for our guests via swimming with dolphins and our collaborative dolphin retreats in Ponta Malongane, Mozambique.</p>
+      <div class="mt-6 flex gap-4">
+        <a class="btn" href={import.meta.env.BASE_URL + 'retreats/'}>View Upcoming Retreats</a>
+        <a class="btn--ghost" href={import.meta.env.BASE_URL + 'learn/plan-your-trip'}>Plan Your Trip</a>
+      </div>
+      <div class="chips mt-6">
+        <a>Since 1999</a><a>Ponta do Ouro MPA</a><a>No‑touch dolphin ethic</a><a>Women’s rewilding</a>
+      </div>
     </div>
   </section>
-  <CTA />
+  <section class="section bg-sand">
+    <div class="container grid gap-6 md:grid-cols-3">
+      <a class="card p-6 no-underline" href={import.meta.env.BASE_URL + 'retreats/'}><h3 class="h3">Retreats</h3><p class="mt-2">Dates, inclusions and prices</p></a>
+      <a class="card p-6 no-underline" href={import.meta.env.BASE_URL + 'experiences/'}><h3 class="h3">Experiences</h3><p class="mt-2">Dolphins, whales, diving & culture</p></a>
+      <a class="card p-6 no-underline" href={import.meta.env.BASE_URL + 'learn/plan-your-trip'}><h3 class="h3">Plan Your Trip</h3><p class="mt-2">Seasons, visas, packing, travel</p></a>
+    </div>
+  </section>
 </Layout>

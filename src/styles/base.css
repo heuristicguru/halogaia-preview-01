@@ -1,18 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root{color-scheme:light;}
-body{@apply bg-white text-gray-900;}
-a{@apply text-ocean underline decoration-2 underline-offset-4;}
-a:hover{@apply opacity-90;}
-.container{@apply mx-auto max-w-7xl px-4;}
-.section{@apply py-12 md:py-16;}
-.h1{@apply text-4xl md:text-5xl font-semibold;}
-.h2{@apply text-3xl md:text-4xl font-semibold;}
-.h3{@apply text-2xl md:text-3xl font-semibold;}
-.lead{@apply text-lg md:text-xl text-gray-700;}
-.btn{@apply inline-block rounded-xl bg-ocean px-5 py-3 text-white no-underline;}
-.btn--alt{@apply inline-block rounded-xl border border-ocean px-5 py-3 text-ocean no-underline;}
-.card{@apply rounded-2xl border bg-white shadow-sm;}
-nav a{@apply no-underline;}
+@tailwind base; @tailwind components; @tailwind utilities;
+body{@apply bg-white text-gray-900;} a{@apply underline decoration-2 underline-offset-4 text-ocean;}
+.container{@apply mx-auto max-w-7xl px-4;} .section{@apply py-12 md:py-16;}
+.h1{@apply text-4xl md:text-6xl font-semibold;} .h2{@apply text-3xl md:text-4xl font-semibold;} .h3{@apply text-2xl md:text-3xl font-semibold;}
+.lead{@apply text-lg md:text-xl text-gray-700;} .btn{@apply inline-block rounded-2xl bg-ocean px-6 py-3 text-white no-underline shadow;}
+.btn--ghost{@apply inline-block rounded-2xl border border-ocean px-6 py-3 text-ocean no-underline;}
+.card{@apply rounded-2xl border bg-white shadow-sm;} .chips a{@apply inline-block mr-2 mb-2 rounded-full bg-foam/30 px-3 py-1 text-sm no-underline;}
+header.sticky{backdrop-filter:saturate(180%) blur(6px); background:rgba(255,255,255,.65);} .hero-img{object-fit:cover; height:420px;}

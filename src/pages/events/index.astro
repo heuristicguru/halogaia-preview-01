@@ -1,21 +1,16 @@
 ---
 import Layout from '../../templates/Layout.astro';
 const base = import.meta.env.BASE_URL;
-const events = [
-  { title: "Re-Wild Yourself", start: "2025-08-13", end: "2025-08-18", url: base + "retreats/wild-woman/" },
-  { title: "Family Holiday Week", start: "2025-12-10", end: "2025-12-15", url: base + "retreats/family-holiday/" },
-  { title: "Blue Moon Ocean Retreat", start: "2026-02-05", end: "2026-02-10", url: base + "retreats/blue-moon/" }
-];
+const events = [ { title: "Re‑Wild Yourself", url: base + "retreats/re-wild-yourself/" } ];
 ---
 <Layout title="Events & Dates" description="Calendar of upcoming retreats and experiences.">
   <main class="container section">
     <h1 class="h1">Events</h1>
-    <p class="mt-2">Subscribe via <a href={base + 'events/events.ics'}>ICS</a> and add to your calendar.</p>
     <ul class="mt-6 grid gap-6 md:grid-cols-2">
       {events.map(e => (
         <li class="card p-6">
           <h3 class="h3"><a class="no-underline" href={e.url}>{e.title}</a></h3>
-          <p class="mt-2">{e.start} → {e.end}</p>
+          <p class="mt-2">See retreat page for dates.</p>
         </li>
       ))}
     </ul>

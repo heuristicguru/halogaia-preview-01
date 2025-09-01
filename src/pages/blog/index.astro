@@ -1,21 +1,9 @@
 ---
 import Layout from '../../templates/Layout.astro';
-const base = import.meta.env.BASE_URL;
-const posts = [
-  {slug:'why-ponta-malongane', title:'Why Ponta Malongane is perfect for deep rest', excerpt:'Warm water, wild coast and gentle community make it a rare pocket of calm.'},
-  {slug:'benefits-of-ocean-retreats', title:'The benefits of ocean retreats', excerpt:'From circadian reset to awe—how the ocean supports nervous system repair.'}
-];
 ---
 <Layout title="Blog" description="Retreat reflections, wildlife notes, and travel tips.">
   <main class="container section">
     <h1 class="h1">Blog</h1>
-    <ul class="mt-8 grid gap-6 md:grid-cols-2">
-      {posts.map(p => (
-        <li class="card p-6">
-          <h3 class="h3"><a class="no-underline" href={base + 'blog/' + p.slug + '/'}>{p.title}</a></h3>
-          <p class="mt-2 text-gray-700">{p.excerpt}</p>
-        </li>
-      ))}
-    </ul>
+    <p class="mt-2">Coming soon: dolphin diaries, whale season updates and retreat stories.</p>
   </main>
 </Layout>

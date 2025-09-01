@@ -1,17 +1,15 @@
 ---
 import Layout from '../templates/Layout.astro';
 ---
-<Layout title="Contact" description="Enquiries, bookings, and WhatsApp.">
+<Layout title="Contact" description="Enquiries & bookings">
   <main class="container section">
     <h1 class="h1">Contact</h1>
-    <p class="mt-2">Send an enquiry and we’ll confirm availability.</p>
     <form class="card p-6 mt-6" name="enquiry" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="enquiry" />
       <label class="block mt-2">Name <input class="mt-1 w-full rounded border p-2" name="name" required /></label>
       <label class="block mt-4">Email <input class="mt-1 w-full rounded border p-2" type="email" name="email" required /></label>
       <label class="block mt-4">Message <textarea class="mt-1 w-full rounded border p-2" name="message" rows="5" required></textarea></label>
       <button class="btn mt-6" type="submit">Send</button>
-      <p class="mt-4 text-sm text-gray-600">Prefer chat? <a href="https://wa.me/27XXXXXXXXX">WhatsApp us</a>.</p>
     </form>
   </main>
 </Layout>
