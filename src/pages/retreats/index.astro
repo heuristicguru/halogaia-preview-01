@@ -1,13 +1,24 @@
 ---
 import Layout from '../../templates/Layout.astro';
+const base = import.meta.env.BASE_URL;
+const retreats = [
+  {slug:'wild-woman', title:'Re-Wild Yourself (Women’s Retreat)', dates:'13–18 Aug 2025', price:'From R14 900 pps', summary:'Circle, ocean practices, sound journeys, and dolphin encounters.'},
+  {slug:'family-holiday', title:'Wild Dolphin Family Holiday', dates:'School holidays', price:'Custom packages', summary:'Family-friendly ocean time, local culture and gentle adventure.'},
+  {slug:'blue-moon', title:'Blue Moon Ocean Retreat', dates:'TBD', price:'From R16 500 pps', summary:'Deep rest, ocean meditations and nature immersion.'}
+];
 ---
-<Layout title="Retreats" description="Upcoming retreats—dates & pricing">
-  <main class="mx-auto max-w-6xl px-4 py-12">
-    <h1 class="text-3xl font-semibold">Retreats</h1>
-    <ul class="mt-6 space-y-4">
-      <li class="border rounded-xl p-6">
-        <a class="text-xl font-medium" href="/retreats/wild-woman">Re-Wild Yourself — Aug 13–18, 2025 — From R14 900</a>
-      </li>
+<Layout title="Retreats" description="Upcoming retreats in Ponta Malongane—dates, pricing, inclusions.">
+  <main class="container section">
+    <h1 class="h1">Retreats</h1>
+    <p class="lead mt-2">Choose a retreat and book your spot. All retreats follow our respectful marine code.</p>
+    <ul class="mt-8 grid gap-6 md:grid-cols-2">
+      {retreats.map(r => (
+        <li class="card p-6">
+          <h3 class="h3"><a class="no-underline" href={base + 'retreats/' + r.slug + '/'}>{r.title}</a></h3>
+          <p class="mt-2">{r.dates} • {r.price}</p>
+          <p class="text-gray-700">{r.summary}</p>
+        </li>
+      ))}
     </ul>
   </main>
 </Layout>

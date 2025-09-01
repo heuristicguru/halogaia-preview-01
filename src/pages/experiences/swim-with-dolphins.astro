@@ -1,11 +1,17 @@
 ---
 import Layout from '../../templates/Layout.astro';
-const schema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"Is touching allowed?","acceptedAnswer":{"@type":"Answer","text":"No—strict no-touch ethic."}}]};
+const base = import.meta.env.BASE_URL;
+const schema = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Our approach", "acceptedAnswer": {"@type": "Answer", "text": "Small groups, one-boat policy, and time windows that put dolphin well-being first."}}, {"@type": "Question", "name": "Seasonality", "acceptedAnswer": {"@type": "Answer", "text": "Dolphins are resident; whales pass July–November."}}, {"@type": "Question", "name": "Is touching allowed?", "acceptedAnswer": {"@type": "Answer", "text": "No—strict no-touch ethic with respectful distances."}}]};
 ---
-<Layout title="Swim with Dolphins — Mozambique" description="Respectful, permit-aligned swims" schema={schema}>
-  <main class="mx-auto max-w-6xl px-4 py-12">
-    <h1 class="text-3xl font-semibold">Swim with Dolphins</h1>
-    <p class="mt-2">Ethical encounters guided by experienced ocean facilitators.</p>
+<Layout title="Swim with Dolphins — Mozambique" description="Ethical encounters guided by experienced ocean facilitators." schema={schema}>
+  <main class="container section">
+    <h1 class="h1">Swim with Dolphins</h1>
+    <p class="lead mt-2">Ethical encounters guided by experienced ocean facilitators.</p>
+<h2 class='h3 mt-8'>Our approach</h2><p class='mt-2'>Small groups, one-boat policy, and time windows that put dolphin well-being first.</p>
+<h2 class='h3 mt-8'>Seasonality</h2><p class='mt-2'>Dolphins are resident; whales pass July–November.</p>
+<h2 class='h3 mt-8'>Is touching allowed?</h2><p class='mt-2'>No—strict no-touch ethic with respectful distances.</p>
+
+    <h2 class="h3 mt-8">Book</h2>
+    <p class="mt-2">Check <a href={base + 'retreats/'}>retreats</a> or <a href={base + 'events/'}>events</a> for dates.</p>
   </main>
 </Layout>

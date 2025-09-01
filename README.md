@@ -1,5 +1,5 @@
-## Quick start
-1) Install Node 18+ and Git
-2) npm i
-3) npm run dev
-4) Deploy to Vercel/Netlify: build `npm run build`, publish `dist`
+# Halo Gaia – Full Mock
+
+1) Update `astro.config.mjs` → put your GitHub Pages URL in `site` and your repo name in `base`.
+2) Commit to GitHub and let the included workflow publish to Pages.
+3) Replace `/public/images/*.svg` with real photos when ready.

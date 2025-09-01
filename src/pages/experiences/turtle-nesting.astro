@@ -1,0 +1,16 @@
+---
+import Layout from '../../templates/Layout.astro';
+const base = import.meta.env.BASE_URL;
+const schema = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Guidelines", "acceptedAnswer": {"@type": "Answer", "text": "Strict ranger-led walks; no flash photography."}}, {"@type": "Question", "name": "When", "acceptedAnswer": {"@type": "Answer", "text": "Nesting starts around Nov; hatchlings Jan–Feb."}}]};
+---
+<Layout title="Turtle Nesting — Mozambique" description="Loggerhead and leatherback nesting & hatchling releases (Nov–Feb)." schema={schema}>
+  <main class="container section">
+    <h1 class="h1">Turtle Nesting</h1>
+    <p class="lead mt-2">Loggerhead and leatherback nesting & hatchling releases (Nov–Feb).</p>
+<h2 class='h3 mt-8'>Guidelines</h2><p class='mt-2'>Strict ranger-led walks; no flash photography.</p>
+<h2 class='h3 mt-8'>When</h2><p class='mt-2'>Nesting starts around Nov; hatchlings Jan–Feb.</p>
+
+    <h2 class="h3 mt-8">Book</h2>
+    <p class="mt-2">Check <a href={base + 'retreats/'}>retreats</a> or <a href={base + 'events/'}>events</a> for dates.</p>
+  </main>
+</Layout>

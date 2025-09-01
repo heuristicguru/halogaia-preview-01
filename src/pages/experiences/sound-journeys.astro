@@ -1,0 +1,16 @@
+---
+import Layout from '../../templates/Layout.astro';
+const base = import.meta.env.BASE_URL;
+const schema = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Modality", "acceptedAnswer": {"@type": "Answer", "text": "Drums, bowls, and voice-led journeys."}}, {"@type": "Question", "name": "Book", "acceptedAnswer": {"@type": "Answer", "text": "Available as part of select retreats."}}]};
+---
+<Layout title="Sound Journeys — Mozambique" description="Evening soundscapes to integrate your retreat experience." schema={schema}>
+  <main class="container section">
+    <h1 class="h1">Sound Journeys</h1>
+    <p class="lead mt-2">Evening soundscapes to integrate your retreat experience.</p>
+<h2 class='h3 mt-8'>Modality</h2><p class='mt-2'>Drums, bowls, and voice-led journeys.</p>
+<h2 class='h3 mt-8'>Book</h2><p class='mt-2'>Available as part of select retreats.</p>
+
+    <h2 class="h3 mt-8">Book</h2>
+    <p class="mt-2">Check <a href={base + 'retreats/'}>retreats</a> or <a href={base + 'events/'}>events</a> for dates.</p>
+  </main>
+</Layout>

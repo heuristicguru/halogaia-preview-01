@@ -1,12 +1,25 @@
 ---
 import Layout from '../../templates/Layout.astro';
+const base = import.meta.env.BASE_URL;
+const items = [
+  {slug:'swim-with-dolphins', title:'Swim with Dolphins', summary:'Gentle ocean time with resident pods.'},
+  {slug:'whale-watching', title:'Whale Watching', summary:'Humpbacks migrate July–November.'},
+  {slug:'diving-reefs', title:'Diving & Reefs', summary:'Warm-water reefs and colourful corals.'},
+  {slug:'turtle-nesting', title:'Turtle Nesting', summary:'Ranger-led walks; hatchlings Jan–Feb.'},
+  {slug:'sound-journeys', title:'Sound Journeys', summary:'Evening soundscapes for integration.'},
+  {slug:'local-culture', title:'Local Culture', summary:'Markets, flavours and village craft.'},
+];
 ---
-<Layout title="Experiences" description="Swim with dolphins, whales, diving, sound journeys">
-  <main class="mx-auto max-w-6xl px-4 py-12">
-    <h1 class="text-3xl font-semibold">Experiences</h1>
-    <ul class="mt-6 grid gap-6 md:grid-cols-2">
-      <li class="border rounded-xl p-6"><a href="/experiences/swim-with-dolphins">Swim with Dolphins</a></li>
-      <li class="border rounded-xl p-6"><a href="/experiences/whale-watching">Whale Watching</a></li>
-    </ul>
+<Layout title="Experiences" description="Swim with dolphins, whale watching, diving, turtle nesting, sound journeys and more.">
+  <main class="container section">
+    <h1 class="h1">Experiences</h1>
+    <div class="grid gap-6 md:grid-cols-3 mt-8">
+      {items.map(i => (
+        <a class="card p-6 no-underline" href={base + 'experiences/' + i.slug + '/'}>
+          <h3 class="h3">{i.title}</h3>
+          <p class="mt-2 text-gray-700">{i.summary}</p>
+        </a>
+      ))}
+    </div>
   </main>
 </Layout>

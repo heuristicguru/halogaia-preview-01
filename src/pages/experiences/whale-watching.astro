@@ -1,0 +1,16 @@
+---
+import Layout from '../../templates/Layout.astro';
+const base = import.meta.env.BASE_URL;
+const schema = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What to expect", "acceptedAnswer": {"@type": "Answer", "text": "Off-shore sightings from the boat and sometimes from shore."}}, {"@type": "Question", "name": "Best months", "acceptedAnswer": {"@type": "Answer", "text": "Peak action is typically August–September."}}]};
+---
+<Layout title="Whale Watching — Mozambique" description="Humpbacks migrate July–November—breaches, spy-hops, and flukes." schema={schema}>
+  <main class="container section">
+    <h1 class="h1">Whale Watching</h1>
+    <p class="lead mt-2">Humpbacks migrate July–November—breaches, spy-hops, and flukes.</p>
+<h2 class='h3 mt-8'>What to expect</h2><p class='mt-2'>Off-shore sightings from the boat and sometimes from shore.</p>
+<h2 class='h3 mt-8'>Best months</h2><p class='mt-2'>Peak action is typically August–September.</p>
+
+    <h2 class="h3 mt-8">Book</h2>
+    <p class="mt-2">Check <a href={base + 'retreats/'}>retreats</a> or <a href={base + 'events/'}>events</a> for dates.</p>
+  </main>
+</Layout>

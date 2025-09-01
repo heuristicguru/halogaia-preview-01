@@ -1,15 +1,29 @@
 ---
 import Layout from '../templates/Layout.astro';
-const schema = {"@context":"https://schema.org","@type":"Organization","name":"Halo Gaia"};
+import Hero from '../components/Hero.astro';
+import TrustStrip from '../components/TrustStrip.astro';
+import CTA from '../components/CTA.astro';
+const schema = {"@context":"https://schema.org","@type":"Organization","name":"Halo Gaia Adventure Travel","url":"https://example.com"};
+const base = import.meta.env.BASE_URL;
 ---
-<Layout title="Halo Gaia — Retreats in Mozambique" description="Preview of improved site IA" schema={schema}>
-  <main class="mx-auto max-w-6xl px-4 py-12">
-    <h1 class="text-4xl font-semibold">Retreat to the wild soul of Mozambique</h1>
-    <p class="mt-4 text-lg text-gray-700">Swim with wild dolphins, women’s rewilding retreats, and family holidays.</p>
-    <div class="mt-8 grid gap-6 md:grid-cols-3">
-      <a href="/retreats" class="border rounded-xl p-6">Retreats</a>
-      <a href="/experiences" class="border rounded-xl p-6">Experiences</a>
-      <a href="/contact" class="border rounded-xl p-6">Contact</a>
+<Layout title="Retreats & Wild Dolphin Encounters in Mozambique" description="Swim with wild dolphins, women’s rewilding retreats, and family holidays in Ponta Malongane." schema={schema}>
+  <Hero title="Retreat to the wild soul of Mozambique" text="Swim with wild dolphins, rest by the ocean, and reconnect with nature in Ponta Malongane." />
+  <TrustStrip />
+  <section class="section">
+    <div class="container grid gap-6 md:grid-cols-3">
+      <a class="card p-6 no-underline" href={base + 'retreats/wild-woman/'}>
+        <h3 class="h3">Re-Wild Yourself (Women’s Retreat)</h3>
+        <p class="mt-2 text-gray-700">Circle, ocean practices, and dolphin encounters. Dates & pricing inside.</p>
+      </a>
+      <a class="card p-6 no-underline" href={base + 'experiences/swim-with-dolphins/'}>
+        <h3 class="h3">Swim with Dolphins</h3>
+        <p class="mt-2 text-gray-700">Respectful, permit-aligned ocean time with resident pods.</p>
+      </a>
+      <a class="card p-6 no-underline" href={base + 'accommodation/'}>
+        <h3 class="h3">Accommodation</h3>
+        <p class="mt-2 text-gray-700">From rustic huts to private homes. Curated stays close to launch.</p>
+      </a>
     </div>
-  </main>
+  </section>
+  <CTA />
 </Layout>
