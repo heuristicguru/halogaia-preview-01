@@ -25,15 +25,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          # ⛔ Do NOT set "cache: npm" here when you have no lockfile
 
-      - name: Install dependencies
+      - name: Install deps
         run: npm install --no-audit --no-fund
 
       - name: Build
         run: npm run build
 
-      - name: Upload Pages artifact
+      # Prepare the Pages deployment
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
